@@ -35,6 +35,7 @@ cvMoveWindow("background", 360, 0);
 cvMoveWindow("foreground", 690, 0);  
 //pCapture = cvCaptureFromAVI("2.avi");   //读入已有视频用此句  
 pCapture = cvCaptureFromCAM(0);           //从摄像头读入视频用此  
+//cvFlip(pCapture);                //翻转图像
 while(pFrame = cvQueryFrame( pCapture ))  
 {  
     nFrmNum++;  
@@ -91,4 +92,3 @@ cvReleaseMat(&pFrameMat);
 cvReleaseMat(&pFrMat);  
 cvReleaseMat(&pBkMat);  
 cvReleaseCapture(&pCapture);  
-} 
